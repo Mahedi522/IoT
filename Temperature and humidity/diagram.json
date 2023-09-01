@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Mahedi Al Arafat",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 102.55, "left": -90.53, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 122.29,
+      "left": 219.25,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": 337.87,
+      "left": -47.26,
+      "attrs": { "temperature": "73.1" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h-4.38", "v-84.62", "h-195.71" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h4.2", "v174.1", "h-157.51", "v-2.34" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-9.83", "v152.91", "h-56.92" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-16.85", "v134.05", "h-5.46" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v0.74", "h-30.67", "v-120.19", "h132.59" ] ],
+    [ "dht1:GND", "uno:GND.2", "black", [ "v-0.21", "h88.39" ] ],
+    [ "dht1:SDA", "uno:2", "green", [ "v23.64", "h-97.41", "v-386.33", "h265.19" ] ]
+  ],
+  "dependencies": {}
+}
